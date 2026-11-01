@@ -1,0 +1,36 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mods]]
+modId = "torchskip"
+version = "1.0.0"
+displayName = "Torch Skip"
+description = '''
+Makes vanilla's natural mob spawner skip attempts that a Torchmaster Mega Torch would deny anyway,
+instead of doing the biome lookups and validity checks first.
+'''
+
+[[mixins]]
+config = "torchskip.mixins.json"
+
+[[dependencies.torchskip]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.torchskip]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.22)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.torchskip]]
+modId = "torchmaster"
+type = "optional"
+versionRange = "[21.1,)"
+ordering = "AFTER"
+side = "BOTH"
